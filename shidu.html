@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>湿度</title>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/01.js"></script>
+    <script src="js/03.js"></script>
+    <link rel="stylesheet" href="css/01.css">
+    <link rel="stylesheet" href="css/icon.css">
+    <script src="http://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+</head>
+<body>
+<div id="header" >
+    <div class="top" >
+        <div class="logo">
+            <div><i class="iconfont" style="font-size: 50px; float: left">&#xe63a;</i><span class="brand"><strong>IAF+</strong></span></div>
+        </div>
+        <div class="container">
+            <ul class="">
+                <li class="nav_item ">
+                    <a class="nav_item link" href=""><span>主页</span></a>
+                </li>
+                <li class="nav_item ">
+                    <a class="nav_item link" href=""><span>我们</span></a>
+                </li>
+                <li class="nav_item ">
+                    <a class="nav_item link" href=""><span>联系</span></a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div id="menu" class="nav">
+        <!-- 左侧黑体导航栏 -->
+        <div class="nav_box" value="wendu"><i class="iconfont">&#xe62e;</i><span>温度</span></div>
+        <div class="nav_box nav_active" value="shidu"><i class="iconfont">&#xe607;</i><span>湿度</span></div>
+        <div class="nav_box" value="guangzhao"><i class="iconfont">&#xe60d;</i><span>光照强度</span></div>
+        <div class="nav_box" value="shuju"><i class="iconfont">&#xe60b;</i><span>数据分析</span></div>
+        <div class="nav_box" value="data"><i class="iconfont">&#xe612;</i><span>数据参数</span></div>
+        <div class="nav_box" value="more"><i class="iconfont">&#xe65d;</i><span>更多</span></div>
+    </div>
+
+    <div id="content" >
+        <script>
+            $(document).ready(function(){
+                chart = new Highcharts.Chart({
+                    chart: {
+                        renderTo: 'content',
+                        defaultSeriesType: 'line',
+                        events: {
+                            load: requestData
+                        }
+                    },
+                    title:{
+                        text: '实时湿度',
+                        x:-20
+                    },
+                    xAxis: {
+                        type: 'datetime',
+                        tickPixelInterval: 150,
+                        maxZoom: 20 * 1000,
+                        dateTimeLabelFormats: {
+                            minute: '%Y-%m-%d %H:%M:%S',
+                        }
+
+
+                    },
+                    yAxis: {
+                        minPadding: 0.2,
+                        maxPadding: 0.2,
+                        title: {
+                            text: '湿度',
+                            margin: 80
+                        }
+                    },
+                    tooltip: {
+
+                           formatter: function(){
+
+                            return Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '湿度：' + this.y +'℃';
+                               
+                        }
+                    },
+                    series: [{
+                        name: '湿度',
+                        data: []
+                    }]
+                });
+            });
+        </script>
+    </div>
+
+    <div id="footer" >
+        版权 © runoob.com
+    </div>
+
+</div>
+</body>
+</html>

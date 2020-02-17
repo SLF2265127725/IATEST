@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="http://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+    <script src="https://cdn.bootcss.com/echarts/3.7.1/echarts.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style type="text/css">
+        .table{
+            width: 1000px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body ng-controller = 'main'>
+<div class="">
+    <table class="table table-bordered table-striped" >
+        <thead>
+        <tr>
+
+            <td>温度</td>
+            <td>湿度</td>
+        </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+</div>
+<script type="text/javascript">
+    $.ajax({
+        type: 'get',
+        url: 'http://localhost:63342/test01/php/02.php',
+        data:{
+        },
+        success: function (data) {
+            //console.log(data);
+            var a = data.split(' ');
+            //console.log(a);
+            var trStr = '';//动态拼接table
+            for (var i = 0; i < a.length-1; i++) {
+                trStr += '<tr class="example">';
+                // trStr += '<td width="15%">' + JSON.parse(a[i]).time + '</td>';
+                trStr += '<td width="15%">' + JSON.parse(a[i]).wendu + '</td>';
+                trStr += '<td width="15%">' + JSON.parse(a[i]).humidity + '</td>';
+                trStr += '</tr>';
+            }
+            $("#tbody").html(trStr);
+        }
+
+    });
+</script>
+</body>
+</html>
