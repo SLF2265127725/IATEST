@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e808671-c8b2-4de0-b9af-970de8061256" name="Default Changelist" comment="" />
+    <list default="true" id="2e808671-c8b2-4de0-b9af-970de8061256" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shidu.html" beforeDir="false" afterPath="$PROJECT_DIR$/shidu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wendu.html" beforeDir="false" afterPath="$PROJECT_DIR$/wendu.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,10 +40,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP (1)" />
   <component name="ProjectId" id="1XKlsFLKZW3Cp4vbxAvAa7nEZqa" />
@@ -52,7 +60,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/js/02.js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -94,6 +102,8 @@
       <workItem from="1581061022767" duration="44902000" />
       <workItem from="1581324984954" duration="5850000" />
       <workItem from="1581390018771" duration="15629000" />
+      <workItem from="1581942984300" duration="476000" />
+      <workItem from="1581945030402" duration="1453000" />
     </task>
     <servers />
   </component>
